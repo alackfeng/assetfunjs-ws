@@ -194,7 +194,7 @@ _this = {
         BitShares: {
             core_asset: "FID",
             address_prefix: "FID",
-            chain_id: "e76e595f05ff816f22f3625629a914c84ec0cf12d4b68aae280dbe5339fa65a4"
+            chain_id: "336ff5b282c25e0fbf6daf18d7698c8936c5aee332dd39ea36c8de54f73a0378"
         }
     },
 
