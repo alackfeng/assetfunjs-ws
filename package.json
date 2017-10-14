@@ -15,8 +15,8 @@
     "build-es": "BABEL_ENV=es babel ./lib -d es",
     "postbuild": "npm run browserify && npm run build-es",
     "prepublish": "npm run build",
-    "browserify": "NODE_ENV=production browserify cjs/src/ApiInstances.js --standalone bitshares_ws -o build/bitsharesjs-ws.js -d",
-    "postbrowserify": "NODE_ENV=production uglifyjs --compress --mangle --sequences --drop_console --mangle-props --screw-ie8 --output build/bitsharesjs-ws.min.js -- build/bitsharesjs-ws.js",
+    "browserify": "NODE_ENV=production browserify cjs/src/ApiInstances.js --standalone fidchain_ws -o build/fidchainjs-ws.js -d",
+    "postbrowserify": "NODE_ENV=production uglifyjs --compress --mangle --sequences --drop_console --mangle-props --screw-ie8 --output build/fidchainjs-ws.min.js -- build/fidchainjs-ws.js",
     "bundle": "npm run browserify && npm run minify"
   },
   "repository": {
@@ -29,7 +29,7 @@
   ],
   "license": "BSD-2-Clause-FreeBSD",
   "bugs": {
-    "url": "https://github.com/bitshares/bitsharesjs-ws/issues"
+    "url": "https://github.com/lilianwen/fidchainjs-ws/issues"
   },
   "engines": {
     "node": ">= 6.0.0"
