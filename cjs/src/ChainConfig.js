@@ -4,20 +4,20 @@ exports.__esModule = true;
 var _this = void 0;
 
 var ecc_config = {
-    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "FID"
+    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "AFT"
 };
 
 _this = {
-    core_asset: "CORE",
-    address_prefix: "FID",
+    core_asset: "AFT",
+    address_prefix: "AFT",
     expire_in_secs: 15,
     expire_in_secs_proposal: 24 * 60 * 60,
     review_in_secs_committee: 24 * 60 * 60,
     networks: {
-        BitShares: {
-            core_asset: "FID",
-            address_prefix: "FID",
-            chain_id: "336ff5b282c25e0fbf6daf18d7698c8936c5aee332dd39ea36c8de54f73a0378"
+        Assetfun: {
+            core_asset: "AFT",
+            address_prefix: "AFT",
+            chain_id: "6bfead230c81d1d12535185b790c54c1cd690797a5ff2c134cad446046ce5421"
         }
     },
 
@@ -60,9 +60,9 @@ _this = {
     },
 
     reset: function reset() {
-        _this.core_asset = "CORE";
-        _this.address_prefix = "FID";
-        ecc_config.address_prefix = "FID";
+        _this.core_asset = "AFT";
+        _this.address_prefix = "AFT";
+        ecc_config.address_prefix = "AFT";
         _this.expire_in_secs = 15;
         _this.expire_in_secs_proposal = 24 * 60 * 60;
 
@@ -70,7 +70,7 @@ _this = {
     },
 
     setPrefix: function setPrefix() {
-        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "FID";
+        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "AFT";
 
         _this.address_prefix = prefix;
         ecc_config.address_prefix = prefix;

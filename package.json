@@ -1,7 +1,7 @@
 {
-  "name": "fidchainjs-ws",
+  "name": "assetfunjs-ws",
   "version": "1.1.3",
-  "description": "Pure JavaScript fidchain/Graphene websocket interface for node.js and browsers.",
+  "description": "Pure JavaScript assetfun/Graphene websocket interface for node.js and browsers.",
   "browser": {
     "ws": false
   },
@@ -15,13 +15,13 @@
     "build-es": "BABEL_ENV=es babel ./lib -d es",
     "postbuild": "npm run browserify && npm run build-es",
     "prepublish": "npm run build",
-    "browserify": "NODE_ENV=production browserify cjs/src/ApiInstances.js --standalone fidchain_ws -o build/fidchainjs-ws.js -d",
-    "postbrowserify": "NODE_ENV=production uglifyjs --compress --mangle --sequences --drop_console --mangle-props --screw-ie8 --output build/fidchainjs-ws.min.js -- build/fidchainjs-ws.js",
+    "browserify": "NODE_ENV=production browserify cjs/src/ApiInstances.js --standalone assetfun_ws -o build/assetfunjs-ws.js -d",
+    "postbrowserify": "NODE_ENV=production uglifyjs --compress --mangle --sequences --drop_console --mangle-props --screw-ie8 --output build/assetfunjs-ws.min.js -- build/assetfunjs-ws.js",
     "bundle": "npm run browserify && npm run minify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lilianwen/fidchainjs-ws.git"
+    "url": "git+https://github.com/lilianwen/assetfunjs-ws.git"
   },
   "author": "Sigve Kvalsvik <bitsharesblocks@gmail.com> (https://github.com/svk31)",
   "contributors": [
@@ -29,7 +29,7 @@
   ],
   "license": "BSD-2-Clause-FreeBSD",
   "bugs": {
-    "url": "https://github.com/lilianwen/fidchainjs-ws/issues"
+    "url": "https://github.com/lilianwen/assetfunjs-ws/issues"
   },
   "engines": {
     "node": ">= 6.0.0"
@@ -49,6 +49,6 @@
     "babel-core": "^6.21.0",
     "browserify": "^13.0.1",
     "mocha": "^2.3.4",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^3.1.10"
   }
 }
