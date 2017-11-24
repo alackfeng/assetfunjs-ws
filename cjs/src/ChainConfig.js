@@ -3,21 +3,28 @@
 exports.__esModule = true;
 var _this = void 0;
 
+var _g_COIN_PREFIX = "AFT";
+
 var ecc_config = {
-    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || "AFT"
+    address_prefix: process.env.npm_config__graphene_ecc_default_address_prefix || _g_COIN_PREFIX
 };
 
 _this = {
-    core_asset: "AFT",
-    address_prefix: "AFT",
+    core_asset: _g_COIN_PREFIX,
+    address_prefix: _g_COIN_PREFIX,
     expire_in_secs: 15,
     expire_in_secs_proposal: 24 * 60 * 60,
     review_in_secs_committee: 24 * 60 * 60,
     networks: {
         Assetfun: {
-            core_asset: "AFT",
-            address_prefix: "AFT",
+            core_asset: _g_COIN_PREFIX,
+            address_prefix: _g_COIN_PREFIX,
             chain_id: "6bfead230c81d1d12535185b790c54c1cd690797a5ff2c134cad446046ce5421"
+        },
+        fidchain: {
+            core_asset: "FID",
+            address_prefix: "FID",
+            chain_id: "e76e595f05ff816f22f3625629a914c84ec0cf12d4b68aae280dbe5339fa65a4"
         }
     },
 
@@ -60,9 +67,9 @@ _this = {
     },
 
     reset: function reset() {
-        _this.core_asset = "AFT";
-        _this.address_prefix = "AFT";
-        ecc_config.address_prefix = "AFT";
+        _this.core_asset = _g_COIN_PREFIX;
+        _this.address_prefix = _g_COIN_PREFIX;
+        ecc_config.address_prefix = _g_COIN_PREFIX;
         _this.expire_in_secs = 15;
         _this.expire_in_secs_proposal = 24 * 60 * 60;
 
@@ -70,7 +77,7 @@ _this = {
     },
 
     setPrefix: function setPrefix() {
-        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "AFT";
+        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _g_COIN_PREFIX;
 
         _this.address_prefix = prefix;
         ecc_config.address_prefix = prefix;
