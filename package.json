@@ -1,6 +1,6 @@
 {
   "name": "assetfunjs-ws",
-  "version": "1.1.3",
+  "version": "1.1.0",
   "description": "Pure JavaScript assetfun/Graphene websocket interface for node.js and browsers.",
   "browser": {
     "ws": false
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lilianwen/assetfunjs-ws.git"
+    "url": "git+https://github.com/assetfun/assetfunjs-ws.git"
   },
   "author": "Sigve Kvalsvik <bitsharesblocks@gmail.com> (https://github.com/svk31)",
   "contributors": [
@@ -29,7 +29,7 @@
   ],
   "license": "BSD-2-Clause-FreeBSD",
   "bugs": {
-    "url": "https://github.com/lilianwen/assetfunjs-ws/issues"
+    "url": "https://github.com/assetfun/assetfunjs-ws/issues"
   },
   "engines": {
     "node": ">= 6.0.0"
