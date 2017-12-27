@@ -19,7 +19,7 @@ _this = {
         Assetfun: {
             core_asset: _g_COIN_PREFIX,
             address_prefix: _g_COIN_PREFIX,
-            chain_id: "6bfead230c81d1d12535185b790c54c1cd690797a5ff2c134cad446046ce5421"
+            chain_id: "1f17d122a5f217003d9210be64840aa2dcdc67c1bfeda363f1565b637900dec1"
         },
         fidchain: {
             core_asset: "FID",
