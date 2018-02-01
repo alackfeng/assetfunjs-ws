@@ -36,13 +36,13 @@ var ChainWebSocket = function () {
             _this.current_reject = reject;
             _this.ws.onopen = function () {
                 clearTimeout(_this.connectionTimeout);
-                if (_this.statusCb) _this.statusCb("open");
+                if (_this.statusCb) _this.statusCb("open", ws_server);
                 if (_this.on_reconnect) _this.on_reconnect();
                 resolve();
             };
             _this.ws.onerror = function (error) {
                 clearTimeout(_this.connectionTimeout);
-                if (_this.statusCb) _this.statusCb("error");
+                if (_this.statusCb) _this.statusCb("error", ws_server);
 
                 if (_this.current_reject) {
                     _this.current_reject(error);
@@ -52,7 +52,7 @@ var ChainWebSocket = function () {
                 return _this.listener(JSON.parse(message.data));
             };
             _this.ws.onclose = function () {
-                if (_this.statusCb) _this.statusCb("closed");
+                if (_this.statusCb) _this.statusCb("closed", ws_server);
             };
         });
         this.cbId = 0;
